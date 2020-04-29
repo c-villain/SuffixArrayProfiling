@@ -2,6 +2,7 @@
 OTUS-iOS homework for Module 15
 
 1. Создать SuffixSequence
+
 1.1 Как показано в уроке создать SuffixIterator
 1.2 Обернуть в SuffixSequence каждое слово из AlgoProvider
 
