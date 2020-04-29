@@ -4,6 +4,7 @@ OTUS-iOS homework for Module 15
 1. Создать SuffixSequence
 1.1 Как показано в уроке создать SuffixIterator
 1.2 Обернуть в SuffixSequence каждое слово из AlgoProvider
+
 2. Собрать профилирование структуры данных Suffix Array
 2.1 Склеить все SuffixSequence в единый массив с элементами кортежами типа (suffix, algoName)
 2.2 Отсортировать этот массив по алфавиту
