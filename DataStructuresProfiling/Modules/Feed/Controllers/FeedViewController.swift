@@ -59,6 +59,9 @@ extension FeedViewController: UITableViewDelegate {
             case "SuffixArray":
                 let storyboard = UIStoryboard(name: "DataStructures", bundle: nil)
                 vc = storyboard.instantiateViewController(withIdentifier: "SuffixArrayViewController")
+            case "GCD Queue":
+                let storyboard = UIStoryboard(name: "DataStructures", bundle: nil)
+                vc = storyboard.instantiateViewController(withIdentifier: "GCDViewController")
             default:
                 let storyboard = UIStoryboard(name: "Feed", bundle: nil)
                 vc = storyboard.instantiateViewController(withIdentifier: "SessionSummaryViewController")

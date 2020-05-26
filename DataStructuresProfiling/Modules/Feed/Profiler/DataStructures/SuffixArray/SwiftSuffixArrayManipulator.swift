@@ -3,7 +3,7 @@
 //  DataStructuresProfiling
 //
 //  Created by Alexander Kraev on 29.04.2020.
-//  Copyright © 2020 Exey Panteleev. All rights reserved.
+//  Copyright © 2020 Alexander Kraev. All rights reserved.
 //
 
 import Foundation

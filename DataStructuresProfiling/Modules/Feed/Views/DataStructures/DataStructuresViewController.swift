@@ -26,7 +26,7 @@ class DataStructuresViewController: UIViewController, UITableViewDataSource, UIT
 
   //MARK: item tracking
 
-  fileprivate var numberOfItems: Int = 1000 //Default to 1000
+   var numberOfItems: Int = 1000 //Default to 1000
 
   //MARK: Lazy-instantiated variables
 

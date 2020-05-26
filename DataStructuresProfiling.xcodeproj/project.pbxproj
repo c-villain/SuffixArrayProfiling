@@ -12,6 +12,10 @@
 		5A28973B2459F62200103C88 /* SuffixArrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A28973A2459F62200103C88 /* SuffixArrayViewController.swift */; };
 		5A28973D2459F7C800103C88 /* SuffixArrayManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A28973C2459F7C800103C88 /* SuffixArrayManipulator.swift */; };
 		5A28973F2459FDD000103C88 /* SwiftSuffixArrayManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A28973E2459FDD000103C88 /* SwiftSuffixArrayManipulator.swift */; };
+		5AE050E4247D063E0046D1CB /* GCDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE050E3247D063E0046D1CB /* GCDViewController.swift */; };
+		5AE050E8247D48200046D1CB /* JobSheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE050E7247D48200046D1CB /* JobSheduler.swift */; };
+		5AE050EB247D643F0046D1CB /* JobQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE050EA247D643F0046D1CB /* JobQueue.swift */; };
+		5AE050ED247D6C530046D1CB /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE050EC247D6C530046D1CB /* Job.swift */; };
 		F719AE0022C54873009D08D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F719ADFF22C54873009D08D3 /* AppDelegate.swift */; };
 		F719AE0722C54877009D08D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F719AE0622C54877009D08D3 /* Assets.xcassets */; };
 		F719AE2022C548CA009D08D3 /* ArrayManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F719AE1622C548C9009D08D3 /* ArrayManipulator.swift */; };
@@ -44,6 +48,10 @@
 		5A28973A2459F62200103C88 /* SuffixArrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixArrayViewController.swift; sourceTree = "<group>"; };
 		5A28973C2459F7C800103C88 /* SuffixArrayManipulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixArrayManipulator.swift; sourceTree = "<group>"; };
 		5A28973E2459FDD000103C88 /* SwiftSuffixArrayManipulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSuffixArrayManipulator.swift; sourceTree = "<group>"; };
+		5AE050E3247D063E0046D1CB /* GCDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDViewController.swift; sourceTree = "<group>"; };
+		5AE050E7247D48200046D1CB /* JobSheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSheduler.swift; sourceTree = "<group>"; };
+		5AE050EA247D643F0046D1CB /* JobQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobQueue.swift; sourceTree = "<group>"; };
+		5AE050EC247D6C530046D1CB /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		F719ADFC22C54873009D08D3 /* DataStructuresProfiling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataStructuresProfiling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F719ADFF22C54873009D08D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F719AE0622C54877009D08D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,6 +100,15 @@
 				5A28973E2459FDD000103C88 /* SwiftSuffixArrayManipulator.swift */,
 			);
 			path = SuffixArray;
+			sourceTree = "<group>";
+		};
+		5AE050E9247D641E0046D1CB /* models */ = {
+			isa = PBXGroup;
+			children = (
+				5AE050EA247D643F0046D1CB /* JobQueue.swift */,
+				5AE050EC247D6C530046D1CB /* Job.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 		F719ADF322C54872009D08D3 = {
@@ -227,6 +244,7 @@
 				F719AE3A22C5490B009D08D3 /* SetViewController.swift */,
 				F719AE3B22C5490B009D08D3 /* DataStructuresViewController.swift */,
 				5A28973A2459F62200103C88 /* SuffixArrayViewController.swift */,
+				5AE050E3247D063E0046D1CB /* GCDViewController.swift */,
 			);
 			path = DataStructures;
 			sourceTree = "<group>";
@@ -234,8 +252,10 @@
 		F719AE4B22C54935009D08D3 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5AE050E9247D641E0046D1CB /* models */,
 				F719AE4C22C54944009D08D3 /* AlgoProvider.swift */,
 				F719AE4D22C54944009D08D3 /* Services.swift */,
+				5AE050E7247D48200046D1CB /* JobSheduler.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -315,7 +335,9 @@
 				F719AE3F22C5490B009D08D3 /* FeedData.swift in Sources */,
 				F719AE4722C5490B009D08D3 /* SetViewController.swift in Sources */,
 				F719AE3E22C5490B009D08D3 /* FeedDataProvider.swift in Sources */,
+				5AE050ED247D6C530046D1CB /* Job.swift in Sources */,
 				5A2897372459DE7200103C88 /* SuffixIterator.swift in Sources */,
+				5AE050EB247D643F0046D1CB /* JobQueue.swift in Sources */,
 				F719AE4522C5490B009D08D3 /* ArrayViewController.swift in Sources */,
 				F719AE2322C548CA009D08D3 /* SwiftDictionaryManipulator.swift in Sources */,
 				5A28973F2459FDD000103C88 /* SwiftSuffixArrayManipulator.swift in Sources */,
@@ -329,6 +351,7 @@
 				F719AE4222C5490B009D08D3 /* FeedViewController.swift in Sources */,
 				5A28973D2459F7C800103C88 /* SuffixArrayManipulator.swift in Sources */,
 				F719AE2722C548CA009D08D3 /* Profiler.swift in Sources */,
+				5AE050E8247D48200046D1CB /* JobSheduler.swift in Sources */,
 				F719AE2022C548CA009D08D3 /* ArrayManipulator.swift in Sources */,
 				F719AE2422C548CA009D08D3 /* DictionaryManipulator.swift in Sources */,
 				F719AE4122C5490B009D08D3 /* SessionSummaryViewController.swift in Sources */,
@@ -337,6 +360,7 @@
 				5A28973B2459F62200103C88 /* SuffixArrayViewController.swift in Sources */,
 				F719AE0022C54873009D08D3 /* AppDelegate.swift in Sources */,
 				F719AE4E22C54945009D08D3 /* AlgoProvider.swift in Sources */,
+				5AE050E4247D063E0046D1CB /* GCDViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +501,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J4GES9GRUE;
 				INFOPLIST_FILE = DataStructuresProfiling/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -495,6 +520,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J4GES9GRUE;
 				INFOPLIST_FILE = DataStructuresProfiling/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
