@@ -12,6 +12,9 @@
 		5A28973B2459F62200103C88 /* SuffixArrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A28973A2459F62200103C88 /* SuffixArrayViewController.swift */; };
 		5A28973D2459F7C800103C88 /* SuffixArrayManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A28973C2459F7C800103C88 /* SuffixArrayManipulator.swift */; };
 		5A28973F2459FDD000103C88 /* SwiftSuffixArrayManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A28973E2459FDD000103C88 /* SwiftSuffixArrayManipulator.swift */; };
+		5A93BC7824A3BA0800F45E0A /* ConcurrentTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93BC7724A3BA0800F45E0A /* ConcurrentTaskViewController.swift */; };
+		5AA92AF824A156A7009846A8 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA92AF724A156A7009846A8 /* Task.swift */; };
+		5AA92AFB24A1574F009846A8 /* TaskSheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA92AFA24A1574F009846A8 /* TaskSheduler.swift */; };
 		5AE050E4247D063E0046D1CB /* GCDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE050E3247D063E0046D1CB /* GCDViewController.swift */; };
 		5AE050E8247D48200046D1CB /* JobSheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE050E7247D48200046D1CB /* JobSheduler.swift */; };
 		5AE050EB247D643F0046D1CB /* JobQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE050EA247D643F0046D1CB /* JobQueue.swift */; };
@@ -48,6 +51,9 @@
 		5A28973A2459F62200103C88 /* SuffixArrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixArrayViewController.swift; sourceTree = "<group>"; };
 		5A28973C2459F7C800103C88 /* SuffixArrayManipulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixArrayManipulator.swift; sourceTree = "<group>"; };
 		5A28973E2459FDD000103C88 /* SwiftSuffixArrayManipulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSuffixArrayManipulator.swift; sourceTree = "<group>"; };
+		5A93BC7724A3BA0800F45E0A /* ConcurrentTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrentTaskViewController.swift; sourceTree = "<group>"; };
+		5AA92AF724A156A7009846A8 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		5AA92AFA24A1574F009846A8 /* TaskSheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSheduler.swift; sourceTree = "<group>"; };
 		5AE050E3247D063E0046D1CB /* GCDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDViewController.swift; sourceTree = "<group>"; };
 		5AE050E7247D48200046D1CB /* JobSheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSheduler.swift; sourceTree = "<group>"; };
 		5AE050EA247D643F0046D1CB /* JobQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobQueue.swift; sourceTree = "<group>"; };
@@ -102,9 +108,19 @@
 			path = SuffixArray;
 			sourceTree = "<group>";
 		};
+		5A93BC7924A3FA8400F45E0A /* Concurrent Queue */ = {
+			isa = PBXGroup;
+			children = (
+				5AA92AF724A156A7009846A8 /* Task.swift */,
+				5AA92AFA24A1574F009846A8 /* TaskSheduler.swift */,
+			);
+			path = "Concurrent Queue";
+			sourceTree = "<group>";
+		};
 		5AE050E9247D641E0046D1CB /* models */ = {
 			isa = PBXGroup;
 			children = (
+				5A93BC7924A3FA8400F45E0A /* Concurrent Queue */,
 				5AE050EA247D643F0046D1CB /* JobQueue.swift */,
 				5AE050EC247D6C530046D1CB /* Job.swift */,
 			);
@@ -245,6 +261,7 @@
 				F719AE3B22C5490B009D08D3 /* DataStructuresViewController.swift */,
 				5A28973A2459F62200103C88 /* SuffixArrayViewController.swift */,
 				5AE050E3247D063E0046D1CB /* GCDViewController.swift */,
+				5A93BC7724A3BA0800F45E0A /* ConcurrentTaskViewController.swift */,
 			);
 			path = DataStructures;
 			sourceTree = "<group>";
@@ -333,6 +350,7 @@
 			files = (
 				F719AE4822C5490B009D08D3 /* DataStructuresViewController.swift in Sources */,
 				F719AE3F22C5490B009D08D3 /* FeedData.swift in Sources */,
+				5AA92AFB24A1574F009846A8 /* TaskSheduler.swift in Sources */,
 				F719AE4722C5490B009D08D3 /* SetViewController.swift in Sources */,
 				F719AE3E22C5490B009D08D3 /* FeedDataProvider.swift in Sources */,
 				5AE050ED247D6C530046D1CB /* Job.swift in Sources */,
@@ -345,6 +363,7 @@
 				F719AE2522C548CA009D08D3 /* SwiftSetManipulator.swift in Sources */,
 				F719AE4322C5490B009D08D3 /* FeedTableViewCell.swift in Sources */,
 				5A2897392459E1B000103C88 /* SuffixSequence.swift in Sources */,
+				5A93BC7824A3BA0800F45E0A /* ConcurrentTaskViewController.swift in Sources */,
 				F719AE2622C548CA009D08D3 /* SetManipulator.swift in Sources */,
 				F719AE4F22C54945009D08D3 /* Services.swift in Sources */,
 				F719AE2222C548CA009D08D3 /* StringGenerator.swift in Sources */,
@@ -353,6 +372,7 @@
 				F719AE2722C548CA009D08D3 /* Profiler.swift in Sources */,
 				5AE050E8247D48200046D1CB /* JobSheduler.swift in Sources */,
 				F719AE2022C548CA009D08D3 /* ArrayManipulator.swift in Sources */,
+				5AA92AF824A156A7009846A8 /* Task.swift in Sources */,
 				F719AE2422C548CA009D08D3 /* DictionaryManipulator.swift in Sources */,
 				F719AE4122C5490B009D08D3 /* SessionSummaryViewController.swift in Sources */,
 				F719AE2122C548CA009D08D3 /* SwiftArrayManipulator.swift in Sources */,

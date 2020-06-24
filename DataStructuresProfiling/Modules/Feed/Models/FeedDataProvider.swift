@@ -12,6 +12,7 @@ struct FeedDataProvider {
     
     func feedMockData() -> [FeedData] {
         return [
+            FeedData(name: "Concurrent Queue"),
             FeedData(name: "GCD Queue"),
             FeedData(name: "Array"),
             FeedData(name: "Set"),

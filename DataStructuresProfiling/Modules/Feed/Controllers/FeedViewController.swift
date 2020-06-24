@@ -62,6 +62,9 @@ extension FeedViewController: UITableViewDelegate {
             case "GCD Queue":
                 let storyboard = UIStoryboard(name: "DataStructures", bundle: nil)
                 vc = storyboard.instantiateViewController(withIdentifier: "GCDViewController")
+            case "Concurrent Queue":
+                let storyboard = UIStoryboard(name: "DataStructures", bundle: nil)
+                vc = storyboard.instantiateViewController(withIdentifier: "ConcurrentTaskViewController")
             default:
                 let storyboard = UIStoryboard(name: "Feed", bundle: nil)
                 vc = storyboard.instantiateViewController(withIdentifier: "SessionSummaryViewController")

@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -481,6 +480,101 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bTS-tV-63r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2020" y="-1385"/>
+        </scene>
+        <!--Suffix Array View Controller-->
+        <scene sceneID="UUc-a0-lgN">
+            <objects>
+                <viewController storyboardIdentifier="ConcurrentTaskViewController" id="z7x-Ls-tYx" userLabel="Suffix Array View Controller" customClass="ConcurrentTaskViewController" customModule="DataStructuresProfiling" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nAx-hs-6bE"/>
+                        <viewControllerLayoutGuide type="bottom" id="PxO-ek-Jq7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U9i-u2-Zn7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1000" minValue="1000" maxValue="10000000" translatesAutoresizingMaskIntoConstraints="NO" id="XDR-D6-k1z">
+                                <rect key="frame" x="18" y="52" width="378" height="31"/>
+                                <connections>
+                                    <action selector="sliderAdjusted:" destination="z7x-Ls-tYx" eventType="valueChanged" id="aNN-Ta-KUb"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQZ-UZ-I8q">
+                                <rect key="frame" x="161" y="90" width="92.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZg-N5-wtu">
+                                <rect key="frame" x="152" y="126.5" width="110" height="30"/>
+                                <state key="normal" title="Create And Test">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="createAndTest" destination="z7x-Ls-tYx" eventType="touchUpInside" id="MQl-TH-sgG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1w-C6-qOe">
+                                <rect key="frame" x="174.5" y="160.5" width="65" height="30"/>
+                                <state key="normal" title="Test Only">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="testOnly" destination="z7x-Ls-tYx" eventType="touchUpInside" id="W1l-Fc-aJN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result Times" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82Q-Yy-01J">
+                                <rect key="frame" x="154.5" y="198.5" width="105.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VzE-Fh-0rw" customClass="Con">
+                                <rect key="frame" x="0.0" y="227" width="414" height="635"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="z7x-Ls-tYx" id="O16-7b-d36"/>
+                                    <outlet property="delegate" destination="z7x-Ls-tYx" id="Sjf-93-pVI"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="i0J-km-wUf">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="S1w-C6-qOe" firstAttribute="top" secondItem="eZg-N5-wtu" secondAttribute="bottom" constant="4" id="5H1-do-HB6"/>
+                            <constraint firstAttribute="centerX" secondItem="i0J-km-wUf" secondAttribute="centerX" id="6A5-iV-dyM"/>
+                            <constraint firstItem="MQZ-UZ-I8q" firstAttribute="top" secondItem="XDR-D6-k1z" secondAttribute="bottom" constant="8" id="6Q5-3a-Ukp"/>
+                            <constraint firstAttribute="centerX" secondItem="eZg-N5-wtu" secondAttribute="centerX" id="AMA-QM-tLd"/>
+                            <constraint firstAttribute="centerX" secondItem="S1w-C6-qOe" secondAttribute="centerX" id="AVq-eS-0UT"/>
+                            <constraint firstAttribute="centerY" secondItem="i0J-km-wUf" secondAttribute="centerY" id="AvB-Gp-jTn"/>
+                            <constraint firstItem="XDR-D6-k1z" firstAttribute="leading" secondItem="U9i-u2-Zn7" secondAttribute="leading" constant="20" id="IIf-XT-fVO"/>
+                            <constraint firstItem="VzE-Fh-0rw" firstAttribute="top" secondItem="82Q-Yy-01J" secondAttribute="bottom" constant="8" id="IgG-SU-RQN"/>
+                            <constraint firstAttribute="trailing" secondItem="XDR-D6-k1z" secondAttribute="trailing" constant="20" id="Iz8-uf-hn2"/>
+                            <constraint firstItem="PxO-ek-Jq7" firstAttribute="top" secondItem="VzE-Fh-0rw" secondAttribute="bottom" id="MSL-Ob-FGs"/>
+                            <constraint firstAttribute="trailing" secondItem="VzE-Fh-0rw" secondAttribute="trailing" id="NXb-rt-CrE"/>
+                            <constraint firstItem="eZg-N5-wtu" firstAttribute="top" secondItem="MQZ-UZ-I8q" secondAttribute="bottom" constant="16" id="dPc-zk-Vog"/>
+                            <constraint firstItem="VzE-Fh-0rw" firstAttribute="leading" secondItem="U9i-u2-Zn7" secondAttribute="leading" id="ex3-yh-Ir3"/>
+                            <constraint firstItem="XDR-D6-k1z" firstAttribute="top" secondItem="nAx-hs-6bE" secondAttribute="bottom" constant="8" id="lVa-gX-xLe"/>
+                            <constraint firstItem="82Q-Yy-01J" firstAttribute="top" secondItem="S1w-C6-qOe" secondAttribute="bottom" constant="8" id="tWB-3s-Rty"/>
+                            <constraint firstAttribute="centerX" secondItem="82Q-Yy-01J" secondAttribute="centerX" id="v7e-3t-ZrM"/>
+                            <constraint firstAttribute="centerX" secondItem="MQZ-UZ-I8q" secondAttribute="centerX" id="xPf-Xa-BSI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="countLabel" destination="MQZ-UZ-I8q" id="zfE-f4-uXw"/>
+                        <outlet property="createAndTestButton" destination="eZg-N5-wtu" id="fhp-B8-hQv"/>
+                        <outlet property="resultsTableView" destination="VzE-Fh-0rw" id="k5h-k6-QJ5"/>
+                        <outlet property="slider" destination="XDR-D6-k1z" id="fqI-Ej-5Ur"/>
+                        <outlet property="spinner" destination="i0J-km-wUf" id="8dl-us-glr"/>
+                        <outlet property="testOnlyButton" destination="S1w-C6-qOe" id="2ps-EM-Og9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Dy-Ei-sK4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2809" y="-1385"/>
         </scene>
     </scenes>
 </document>
