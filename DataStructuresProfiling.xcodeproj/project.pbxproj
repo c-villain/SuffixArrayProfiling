@@ -97,6 +97,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A1F6FC624A92DEF0036DE52 /* GCD Pattern 1 */ = {
+			isa = PBXGroup;
+			children = (
+				5AE050E7247D48200046D1CB /* JobSheduler.swift */,
+				5AE050EA247D643F0046D1CB /* JobQueue.swift */,
+				5AE050EC247D6C530046D1CB /* Job.swift */,
+			);
+			path = "GCD Pattern 1";
+			sourceTree = "<group>";
+		};
 		5A2897352459DE5A00103C88 /* SuffixArray */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,21 +118,20 @@
 			path = SuffixArray;
 			sourceTree = "<group>";
 		};
-		5A93BC7924A3FA8400F45E0A /* Concurrent Queue */ = {
+		5A93BC7924A3FA8400F45E0A /* Concurrent Queue with tasks Pattern 2 */ = {
 			isa = PBXGroup;
 			children = (
 				5AA92AF724A156A7009846A8 /* Task.swift */,
 				5AA92AFA24A1574F009846A8 /* TaskSheduler.swift */,
 			);
-			path = "Concurrent Queue";
+			path = "Concurrent Queue with tasks Pattern 2";
 			sourceTree = "<group>";
 		};
 		5AE050E9247D641E0046D1CB /* models */ = {
 			isa = PBXGroup;
 			children = (
-				5A93BC7924A3FA8400F45E0A /* Concurrent Queue */,
-				5AE050EA247D643F0046D1CB /* JobQueue.swift */,
-				5AE050EC247D6C530046D1CB /* Job.swift */,
+				5A1F6FC624A92DEF0036DE52 /* GCD Pattern 1 */,
+				5A93BC7924A3FA8400F45E0A /* Concurrent Queue with tasks Pattern 2 */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -272,7 +281,6 @@
 				5AE050E9247D641E0046D1CB /* models */,
 				F719AE4C22C54944009D08D3 /* AlgoProvider.swift */,
 				F719AE4D22C54944009D08D3 /* Services.swift */,
-				5AE050E7247D48200046D1CB /* JobSheduler.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
